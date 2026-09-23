@@ -17,14 +17,16 @@
     <table border="1" cellpadding="8">
         <thead>
             <tr>
-                <th>Full Name</th>
+                <th>ID</th>
+                <th>FullName</th>
                 <th>Email</th>
-                <th>Phone</th>
+                <th>PhoneNumber</th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($customers as $customer): ?>
                 <tr>
+                    <td><?= esc($customer['id']) ?></td>
                     <td><?= esc($customer['full_name']) ?></td>
                     <td><?= esc($customer['email']) ?></td>
                     <td><?= esc($customer['phone']) ?></td>
