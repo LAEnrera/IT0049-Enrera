@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Accounts</title>
+</head>
+<body>
+    <nav>
+        <a href="<?= site_url('/') ?>">Home</a> |
+        <a href="<?= site_url('about') ?>">About</a> |
+        <a href="<?= site_url('customers') ?>">Customer Accounts</a> |
+        <a href="<?= site_url('users') ?>">User Accounts</a>
+    </nav>
+
+    <h1>Customer Accounts</h1>
+
+    <table border="1" cellpadding="8">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>FullName</th>
+                <th>Email</th>
+                <th>PhoneNumber</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($customers as $customer): ?>
+                <tr>
+                    <td><?= esc($customer['id']) ?></td>
+                    <td><?= esc($customer['full_name']) ?></td>
+                    <td><?= esc($customer['email']) ?></td>
+                    <td><?= esc($customer['phone']) ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</body>
+</html>
